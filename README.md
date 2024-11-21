@@ -1,7 +1,7 @@
-# Food for Life
+# Good Food
 
 ## Giới thiệu
-Website "Food for Life" là một website chuyên cung cấp các món ăn ngon, an toàn cho sức khỏe, với giao diện thân thiện và dễ sử dụng, hướng tới việc mang lại trải nghiệm mua sắm trực tuyến tiện lợi và hiệu quả cho người dùng.
+Website "Good Food" là một website chuyên cung cấp các món ăn ngon, an toàn cho sức khỏe, với giao diện thân thiện và dễ sử dụng, hướng tới việc mang lại trải nghiệm mua sắm trực tuyến tiện lợi và hiệu quả cho người dùng.
 
 ## Chức Năng Chính
 
@@ -44,4 +44,4 @@ Website "Food for Life" là một website chuyên cung cấp các món ăn ngon,
 
 Để xem thiết kế của trang web, hãy nhấp vào liên kết bên dưới:
 
-[**Food For Life Interface Preview**](https://preview.webflow.com/preview/hiens-beautiful-site-3d8c5b?utm_medium=preview_link&utm_source=designer&utm_content=hiens-beautiful-site-3d8c5b&preview=922483faee02c04896c2a4991a46c2d8&locale=en&workflow=preview)
+[**Good Foode Interface Preview**](https://preview.webflow.com/preview/hiens-beautiful-site-3d8c5b?utm_medium=preview_link&utm_source=designer&utm_content=hiens-beautiful-site-3d8c5b&preview=922483faee02c04896c2a4991a46c2d8&locale=en&workflow=preview)
