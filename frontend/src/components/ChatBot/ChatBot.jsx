@@ -10,44 +10,40 @@ const Chatbot = () => {
     const handleSend = async () => {
         if (!input.trim()) return;
 
-        // Tin nhắn từ người dùng
         const userMessage = { sender: "user", text: input };
-        setMessages([...messages, userMessage]); // Cập nhật tin nhắn người dùng
+        setMessages([...messages, userMessage]);
 
         try {
-            // Gửi yêu cầu tới backend
             const response = await axios.post("http://localhost:4000/api/chat", { message: input });
-
-            // Tin nhắn phản hồi từ bot
             const botMessage = { sender: "bot", text: response.data.reply };
-            setMessages((prevMessages) => [...prevMessages, botMessage]); // Cập nhật tin nhắn bot
+            setMessages((prevMessages) => [...prevMessages, botMessage]);
         } catch (error) {
             console.error("Error:", error);
         }
 
-        setInput(""); // Xóa input sau khi gửi
+        setInput("");
     };
 
     const toggleChat = () => {
-        setIsChatOpen(!isChatOpen); // Đóng/mở chat
+        setIsChatOpen(!isChatOpen);
     };
 
     return (
         <div>
-            {/* Biểu tượng chatbot hình tròn */}
+            {/* Biểu tượng Messenger */}
             <div className="chatbot-icon" onClick={toggleChat}>
-                <i className="fas fa-comments"></i>
+                <i className="fab fa-facebook-messenger"></i>
             </div>
 
-            {/* Chatbox hiển thị khi mở */}
+            {/* Chatbox */}
             {isChatOpen && (
                 <div className="chatbot-container">
                     <div className="chatbox">
                         {messages.map((msg, index) => (
                             <div key={index} className={`message ${msg.sender}`}>
-                                <strong className="sender">
+                                <span className="sender">
                                     {msg.sender === "user" ? "You" : "Bot"}:
-                                </strong>{" "}
+                                </span>{" "}
                                 {msg.text}
                             </div>
                         ))}
@@ -59,7 +55,10 @@ const Chatbot = () => {
                             onChange={(e) => setInput(e.target.value)}
                             placeholder="Type a message..."
                         />
-                        <button onClick={handleSend}>Send</button>
+                        <button onClick={handleSend}>
+                            <i className="fas fa-send"></i> Send
+                        </button>
+
                     </div>
                 </div>
             )}
