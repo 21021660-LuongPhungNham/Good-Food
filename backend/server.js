@@ -15,7 +15,11 @@ const port = 4000;
 
 // middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000', // Thêm URL của frontend tại đây
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 // app.use(express.urlencoded({ extended: true }));
 
 // db connect
@@ -31,13 +35,13 @@ app.use("/api/order", orderRouter);
 // Thêm endpoint mới để giao tiếp với ChatGPT
 app.post("/api/chat", async (req, res) => {
     const userMessage = req.body.message;
-    const apiKey = process.env.OPENAI_API_KEY; // Lấy API Key từ biến môi trường
+    const apiKey = process.env.OPENAI_API_KEY;
 
     try {
         const response = await axios.post(
             "https://api.openai.com/v1/chat/completions",
             {
-                model: "gpt-4", // Sử dụng GPT-4
+                model: "gpt-4",
                 messages: [{ role: "user", content: userMessage }],
             },
             {
@@ -46,13 +50,17 @@ app.post("/api/chat", async (req, res) => {
                 },
             }
         );
-        // Gửi phản hồi từ ChatGPT về cho frontend
+
+        // Log dữ liệu phản hồi từ OpenAI để kiểm tra
+        console.log(response.data);
+
         res.json({ reply: response.data.choices[0].message.content });
     } catch (error) {
         console.error("Error:", error);
         res.status(500).json({ error: error.message });
     }
 });
+
 
 app.get("/", (req, res) => {
     res.send("API work");
