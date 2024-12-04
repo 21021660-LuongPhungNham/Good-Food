@@ -1,4 +1,3 @@
-import React from 'react'
 import './Verify.css'
 
 import { useContext, useEffect } from 'react'
@@ -7,7 +6,7 @@ import { StoreContext } from '../../context/StoreContext'
 import axios from 'axios'
 
 const Verify = () => {
-    const [searchParams, setsearchParams] = useSearchParams()
+    const [searchParams] = useSearchParams()
     const success = searchParams.get("success")
     const orderId = searchParams.get("orderId")
     const { url } = useContext(StoreContext);
