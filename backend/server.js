@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
 import { connectDB } from "./config/db.js"
-import foodRouter from "./routers/foodRoute.js"
+import foodRouter from "./routers/foodRouter.js"
 import userRouter from "./routers/userRouter.js"
 import cartRouter from "./routers/cartRouter.js"
 import dotenv from "dotenv"
@@ -12,6 +12,7 @@ import initWebRouter from "./routers/web.js"
 import homepageController from "./controllers/homepageController.js"
 import bodyParser from "body-parser"
 
+import chatRouter from "./routers/chatRouter.js"
 // app config
 const app = express()
 const port = 4000
@@ -37,7 +38,7 @@ app.use("/images", express.static('uploads'))
 app.use("/api/user", userRouter)
 app.use("/api/cart", cartRouter)
 app.use("/api/order", orderRouter)
-
+app.use("/api/chat", chatRouter)
 
 app.get("/", (req, res) => {
     res.send("API work")
