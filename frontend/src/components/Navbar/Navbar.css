@@ -3,6 +3,10 @@
     padding: 20px 0px;
     justify-content: space-between;
     align-items: center;
+    height: 150px; /* Điều chỉnh chiều cao theo ý muốn */
+    background: url('background.png') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .navbar.logo {
@@ -15,12 +19,22 @@
     gap: 1.25rem;
     color: #494949;
     font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.8); /* Màu nền trắng với độ trong suốt */
+    border: 2px solid white; /* Khung trắng */
+    border-radius: 8px; /* Bo tròn các góc */
+    padding: 10px; /* Thêm khoảng cách bên trong */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .navbar-right {
     display: flex;
     align-items: center;
     gap: 40px;
+    /* background-color: rgba(255, 255, 255, 0.8); /* Màu nền trắng với độ trong suốt */
+    border: 2px solid white; /* Khung trắng */
+    border-radius: 8px; /* Bo tròn các góc */
+    padding: 10px; /* Thêm khoảng cách bên trong */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .navbar button {

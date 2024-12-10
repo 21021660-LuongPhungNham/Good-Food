@@ -9,7 +9,7 @@ import LoginPopup from './components/LoginPopup/LoginPopup';
 import { useState } from 'react';
 import Verify from './pages/Verify/Verify';
 import MyOrders from './pages/MyOrders/MyOrders';
-import ChatBotPopup from './components/ChatBot/ChatBotPopup';
+import ChatBotPopup from './components/chatbot/ChatBotPopup';
 
 const App = () => {
 

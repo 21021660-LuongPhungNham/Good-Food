@@ -1,25 +1,14 @@
-/* ChatBot Container */
-.chatbot-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
 
-/* ChatBot Icon */
 .chatbot-icon {
     width: 60px;
     height: 60px;
     background-color: #007bff;
-    color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
 }
 
 .chatbot-icon:hover {
@@ -29,13 +18,13 @@
 /* ChatBot Popup */
 .chatbot-popup {
     position: fixed;
-    bottom: 90px; /* Khoảng cách với đáy màn hình */
+    bottom: 90px;
     right: 20px;
     width: 300px;
+    height: 400px;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
 }
@@ -70,12 +59,10 @@
 .message.user {
     background-color: #007bff;
     color: white;
-    align-self: flex-end;
 }
 
 .message.bot {
     background-color: #f1f1f1;
-    align-self: flex-start;
 }
 
 /* Footer của ChatBot */
@@ -111,12 +98,6 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000;
-    max-height: calc(100vh - 100px); /* Đảm bảo không tràn footer */
-    overflow: hidden;
+    max-height: calc(100vh - 100px);
 }
 
-/* Đảm bảo icon chatbot luôn ở góc dưới cùng */
-.chatbot-icon.footer-visible {
-    bottom: 90px; /* Đẩy lên một chút khi footer gần hiển thị */
-}
