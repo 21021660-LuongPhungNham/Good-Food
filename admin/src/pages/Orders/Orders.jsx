@@ -3,6 +3,7 @@ import './Orders.css'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { assets } from '../../assets/assets';
+import PropTypes from 'prop-types';
 
 const Orders = ({ url }) => {
   const [orders, setOrders] = useState([]);
@@ -92,4 +93,7 @@ const Orders = ({ url }) => {
   )
 }
 
+Orders.propTypes = {
+  url: PropTypes.string.isRequired, // url phải là chuỗi và bắt buộc
+};
 export default Orders

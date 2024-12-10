@@ -3,7 +3,7 @@
     padding: 20px 0px;
     justify-content: space-between;
     align-items: center;
-    height: 150px; /* Điều chỉnh chiều cao theo ý muốn */
+    height: 150px;
     background: url('background.png') no-repeat;
     background-size: cover;
     background-position: center;
@@ -17,31 +17,30 @@
     display: flex;
     list-style: none;
     gap: 1.25rem;
-    color: #494949;
+    color: #060000f2;
     font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.8); /* Màu nền trắng với độ trong suốt */
-    border: 2px solid white; /* Khung trắng */
-    border-radius: 8px; /* Bo tròn các góc */
-    padding: 10px; /* Thêm khoảng cách bên trong */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-right {
     display: flex;
     align-items: center;
     gap: 40px;
-    /* background-color: rgba(255, 255, 255, 0.8); /* Màu nền trắng với độ trong suốt */
-    border: 2px solid white; /* Khung trắng */
-    border-radius: 8px; /* Bo tròn các góc */
-    padding: 10px; /* Thêm khoảng cách bên trong */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar button {
     background: transparent;
     font-size: 16px;
     color: #494949;
-    border: 1px solid tomato;
+    border: 1px solid rgb(202, 67, 43);
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
@@ -63,7 +62,6 @@
 
 .Navbar-search-icon {
     position: relative;
-    
 }
 
 .Navbar-search-icon .dot {
@@ -106,9 +104,10 @@
     cursor: pointer;
 }
 
-.nav-profile-dropdown li :hover{
+.nav-profile-dropdown li :hover {
     color: tomato;
 }
+
 .nav-profile-dropdown img {
     width: 20px;
 }
